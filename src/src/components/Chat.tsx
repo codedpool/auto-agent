@@ -113,11 +113,30 @@ ${relevantEntries.map(entry =>
   }
 
   context += `📎 RESPONSE INSTRUCTION:
-- Interpret user query as a visual automation or knowledge retrieval task
-- Use index memory to inform planning and response
-- If a desktop task, describe the action sequence clearly
-- If analytical, provide a clear, concise, and informed answer
-- Always suggest next steps or follow-ups when applicable
+- Interpret the user query as a task or knowledge question.
+- Respond using **bullet points** only.
+- **Add two newlines (\n\n) between each bullet point.**
+- Do not place multiple points on the same line.
+- Do not use paragraphs or combined bullets.
+- End with a "**Suggested Follow-up:** ..." line.
+
+🧪 Example Format:
+
+• Step 1: Describe the first step in detail.
+
+\n\n
+
+• Step 2: Describe the next action clearly.
+
+\n\n
+
+• Step 3: Give deeper insight, if needed.
+
+\n\n
+
+Suggested Follow-up: Ask a related question or next action.
+
+
 
 🗣 USER QUERY:
 ${userQuery}
